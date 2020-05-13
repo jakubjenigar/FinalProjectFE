@@ -1,0 +1,21 @@
+.mat-toolbar{
+  background-color: rgba(0,170,255,0.4);
+  position: absolute;
+}
+
+img{
+  height: 100%;
+  width: 20%;
+}
+
+.signupButtons{
+  text-align: right;
+}
+
+.example-spacer {
+  flex: 1 1 auto;
+}
+
+
+
+
