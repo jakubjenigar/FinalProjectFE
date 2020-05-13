@@ -18,7 +18,7 @@ export class SignupComponent implements OnInit {
     pass: '',
     email: '',
     birthDate: ''
-  }
+  };
 
   constructor(
   private customerService: CustomerService,
