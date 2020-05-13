@@ -10,15 +10,13 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import {MatCardModule} from '@angular/material/card';
 import {MatButtonModule} from '@angular/material/button';
 import {LoginComponent } from './login/login.component';
-import {MatCheckboxModule} from '@angular/material/checkbox'; 
-import {MatTabsModule} from '@angular/material/tabs'; 
-import {MatIconModule} from '@angular/material/icon'; 
-import {MatFormFieldModule} from '@angular/material/form-field'; 
+import {MatCheckboxModule} from '@angular/material/checkbox';
+import {MatTabsModule} from '@angular/material/tabs';
+import {MatIconModule} from '@angular/material/icon';
+import {MatFormFieldModule} from '@angular/material/form-field';
 
 import {MatInputModule} from '@angular/material/input';
-import { ItemComponent } from './item/item.component'; 
-
-
+import { ItemComponent } from './item/item.component';
 
 import { SignupComponent } from './signup/signup.component';
 import { HttpClientModule } from '@angular/common/http';

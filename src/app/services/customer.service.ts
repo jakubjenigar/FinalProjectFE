@@ -39,7 +39,7 @@ export class CustomerService {
   }
 
   // Login check
-  loginCheck(username, password) {
-    return this.http.get(`${baseUrl}/login/${username}/${password}`);
+  loginCheck(username, pass) {
+    return this.http.get(`${baseUrl}/login/${username}/${pass}`);
   }
 }
