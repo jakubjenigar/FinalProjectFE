@@ -1,32 +1,39 @@
-
-
 <div class="login-page">
-<div>
-
+  <div>
     <mat-card>
-        <form [formGroup]="form">
-            <mat-form-field>
-              <input type="text" matInput
-      placeholder="Username"
-      type="username"
-      [(ngModel)]="customer.username"
-      formControlName="username">
-            </mat-form-field>
+      <form [formGroup]="form">
+        <mat-form-field>
+          <input
+            type="text"
+            matInput
+            placeholder="Username"
+            type="username"
+            [(ngModel)]="customer.username"
+            formControlName="username"
+          />
+        </mat-form-field>
 
-            <mat-form-field>
-              <input type="password" matInput
-              placeholder="Password"
-              [(ngModel)]="customer.pass"
-              formControlName="username">
-              </mat-form-field>
+        <mat-form-field>
+          <input
+            type="password"
+            matInput
+            placeholder="Password"
+            [(ngModel)]="customer.pass"
+            formControlName="username"
+          />
+        </mat-form-field>
 
-              <div class="login-button">
-                <button type="submit" mat-raised-button  (click)="login()" matTooltip="Log in to your account">Login</button>
-              </div>
-            </form>
+        <div class="login-button">
+          <button
+            type="submit"
+            mat-raised-button
+            (click)="login()"
+            matTooltip="Log in to your account"
+          >
+            Login
+          </button>
+        </div>
+      </form>
     </mat-card>
-
-
-
-    </div>
-     </div>
+  </div>
+</div>
