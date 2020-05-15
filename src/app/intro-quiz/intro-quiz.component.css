@@ -1,5 +1,6 @@
 .example-card {
   max-width: 100vw;
+
   width: 100vm;
   height: 50vh;
   display: inline-block;
@@ -15,16 +16,23 @@
 }
 
 
+
+
 .test{
+  max-width: 100vm;
 
   height: 100vh;
   width: 100vw;
-
+  position: relative;
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
   background-attachment: fixed;
-  background-image: url("https://images.unsplash.com/photo-1509326066092-14b2e882fe86?ixlib=rb-1.2.1&auto=format&fit=crop&w=1936&q=80");
+  background-image: url("https://images.unsplash.com/photo-1516937941344-00b4e0337589?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2250&q=80");
 }
 
 
+.cta{
+  min-width: 100vw;
+  width: 100vw;
+}
