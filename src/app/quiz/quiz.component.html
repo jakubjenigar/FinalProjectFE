@@ -1,0 +1,57 @@
+<div class="example-container">
+  <h2>Answers</h2>
+
+  <div
+    id="all"
+    cdkDropList
+    [cdkDropListData]="all"
+    cdkDropListConnectedTo="question1, question2"
+    class="example-list"
+    (cdkDropListDropped)="drop($event)"
+    [cdkDropListEnterPredicate]="noReturnPredicate">
+    <div
+      class="example-box"
+      *ngFor="let number of all"
+      [cdkDragData]="number"
+      cdkDrag>{{number}}</div>
+  </div>
+</div>
+
+<div class="example-container">
+  <h2>Question 1: When is Earth day?</h2>
+
+  <div
+    id="question1"
+    cdkDropList
+    [cdkDropListData]="even"
+    cdkDropListConnectedTo="all"
+    class="example-list"
+    (cdkDropListDropped)="drop($event)"
+    [cdkDropListEnterPredicate]="evenPredicate">
+    <div
+      class="example-box"
+      *ngFor="let number of even"
+      cdkDrag>{{number}}</div>
+  </div>
+</div>
+
+<div class="example-container">
+  <h2>Question 2: When is my day?</h2>
+
+  <div
+    id="question2"
+    cdkDropList
+    [cdkDropListData]="even"
+    cdkDropListConnectedTo="all"
+    class="example-list"
+    (cdkDropListDropped)="drop($event)"
+    [cdkDropListEnterPredicate]="evenPredicate">
+    <div
+      class="example-box"
+      *ngFor="let number of second"
+      cdkDrag
+      [cdkDragData]="number">{{number}}</div>
+  </div>
+</div>
+
+

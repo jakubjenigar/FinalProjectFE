@@ -22,6 +22,8 @@ import { LandingPageComponent } from './landing-page/landing-page.component';
 import { FeaturesComponent } from './features/features.component';
 import { FooterComponent } from './footer/footer.component';
 import { IntroQuizComponent } from './intro-quiz/intro-quiz.component';
+import { QuizComponent } from './quiz/quiz.component';
+import {DragDropModule} from '@angular/cdk/drag-drop';
 
 @NgModule({
   declarations: [
@@ -36,6 +38,7 @@ import { IntroQuizComponent } from './intro-quiz/intro-quiz.component';
     FeaturesComponent,
     FooterComponent,
     IntroQuizComponent,
+    QuizComponent,
   ],
   imports: [
     BrowserModule,
@@ -55,7 +58,8 @@ import { IntroQuizComponent } from './intro-quiz/intro-quiz.component';
     HttpClientModule,
     MatFormFieldModule,
     MatInputModule,
-    MatToolbarModule
+    MatToolbarModule,
+    DragDropModule
   ],
   schemas: [CUSTOM_ELEMENTS_SCHEMA],
   providers: [],
