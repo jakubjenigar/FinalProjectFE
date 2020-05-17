@@ -1,0 +1,41 @@
+.footertext{
+    padding-top: 30px;
+    color: white;
+    margin-left: -40px;
+  }
+
+  .footer-copyright {
+      color:white;
+  }
+
+  .text-uppercase {
+      color: white;
+  }
+
+.menufooter {
+    padding-left: 80px;
+}
+
+  .footerimg {
+      width: 60%;
+      margin-top: -5px;
+    }
+
+  li {
+      text-decoration: none;
+      color: white;
+  }
+
+  a{
+      text-decoration: none;
+      color: white;
+  }
+
+  .contactus {
+      padding-left: 30px;
+  }
+
+  .emailphone {
+      padding-top: 30px;
+      padding-left: 80px;
+  }

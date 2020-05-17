@@ -30,7 +30,7 @@ import { IntroCardComponent } from './intro-card/intro-card.component';
 import { LandingPageComponent } from './landing-page/landing-page.component';
 import { FeaturesComponent } from './features/features.component';
 import { FooterComponent } from './footer/footer.component';
-import { IntroQuizComponent } from './intro-quiz/intro-quiz.component';
+import { SupportComponent } from './support/support.component';
 
 
 
@@ -48,7 +48,7 @@ import { IntroQuizComponent } from './intro-quiz/intro-quiz.component';
     LandingPageComponent,
     FeaturesComponent,
     FooterComponent,
-    IntroQuizComponent,
+    SupportComponent,
 
   ],
   imports: [
