@@ -11,6 +11,7 @@ import {MatCheckboxModule} from '@angular/material/checkbox';
 import {MatTabsModule} from '@angular/material/tabs';
 import {MatIconModule} from '@angular/material/icon';
 import {MatFormFieldModule} from '@angular/material/form-field';
+import {MatTableModule} from '@angular/material/table';
 import {MatInputModule} from '@angular/material/input';
 import { ItemComponent } from './item/item.component';
 import { SignupComponent } from './signup/signup.component';
@@ -24,6 +25,7 @@ import { FooterComponent } from './footer/footer.component';
 import { IntroQuizComponent } from './intro-quiz/intro-quiz.component';
 import { QuizComponent } from './quiz/quiz.component';
 import {DragDropModule} from '@angular/cdk/drag-drop';
+import { CartComponent } from './cart/cart.component';
 
 @NgModule({
   declarations: [
@@ -31,6 +33,7 @@ import {DragDropModule} from '@angular/cdk/drag-drop';
     routingComponents,
     LoginComponent,
     ItemComponent,
+    CartComponent,
     SignupComponent,
     NavbarComponent,
     IntroCardComponent,
@@ -46,6 +49,7 @@ import {DragDropModule} from '@angular/cdk/drag-drop';
     BrowserAnimationsModule,
     MatCardModule,
     MatButtonModule,
+    MatTableModule,
     MatCheckboxModule,
     MatCheckboxModule,
     MatTabsModule,
