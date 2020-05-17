@@ -1,26 +1,24 @@
 import { CustomerService} from './../services/customer.service';
 import { Router, ActivatedRoute } from '@angular/router';
-import { Input, Component, Output, EventEmitter, OnInit } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormControl } from '@angular/forms';
+
 @Component({
   selector: 'app-login',
   templateUrl: './login.component.html',
   styleUrls: ['./login.component.css']
 })
+
 export class LoginComponent implements OnInit {
-  currentUser = null;
-  message = '';
-  customer = {
+  customer: any = {
     username: '',
-    pass: ''
+    pass: '',
   };
-  userType;
 
   form: FormGroup = new FormGroup({
     username: new FormControl(),
     pass: new FormControl(),
   });
-
 
   constructor(
     private router: Router,
@@ -28,19 +26,18 @@ export class LoginComponent implements OnInit {
     private customerService: CustomerService
   ) {}
 
-  ngOnInit() { }
+  ngOnInit() {}
 
   login() {
     {
       this.customerService
         .loginCheck(this.customer.username, this.customer.pass)
         .subscribe(
-          (response) => {
-            console.log(response);
-
+          (response) =>  {
+          //  console.log(response, JSON.stringify(response));
             if (response !== null) {
-                alert('Hello user');
-                // navigate to shooping catalog?
+                alert('Hello user'); // navigation to somewhere
+                localStorage.setItem('customerId', response['customerId']); // use almost the same shit for admin login if you need it
               }
           },
           (error) => {
@@ -50,5 +47,4 @@ export class LoginComponent implements OnInit {
         );
     }
   }
-
 }
