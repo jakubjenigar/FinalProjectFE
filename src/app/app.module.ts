@@ -14,7 +14,7 @@ import {MatCheckboxModule} from '@angular/material/checkbox';
 import {MatTabsModule} from '@angular/material/tabs';
 import {MatIconModule} from '@angular/material/icon';
 import {MatFormFieldModule} from '@angular/material/form-field';
-
+import {MatTableModule} from '@angular/material/table';
 import {MatInputModule} from '@angular/material/input';
 import { ItemComponent } from './item/item.component';
 
@@ -31,6 +31,7 @@ import { LandingPageComponent } from './landing-page/landing-page.component';
 import { FeaturesComponent } from './features/features.component';
 import { FooterComponent } from './footer/footer.component';
 import { IntroQuizComponent } from './intro-quiz/intro-quiz.component';
+import { CartComponent } from './cart/cart.component';
 
 
 
@@ -41,7 +42,7 @@ import { IntroQuizComponent } from './intro-quiz/intro-quiz.component';
     routingComponents,
     LoginComponent,
     ItemComponent,
-
+    CartComponent,
     SignupComponent,
     NavbarComponent,
     IntroCardComponent,
@@ -57,7 +58,7 @@ import { IntroQuizComponent } from './intro-quiz/intro-quiz.component';
     BrowserAnimationsModule,
     MatCardModule,
     MatButtonModule,
-
+    MatTableModule,
     MatCheckboxModule,
     MatCheckboxModule,
     MatTabsModule,
