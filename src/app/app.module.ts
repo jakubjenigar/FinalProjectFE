@@ -22,10 +22,17 @@ import { IntroCardComponent } from './intro-card/intro-card.component';
 import { LandingPageComponent } from './landing-page/landing-page.component';
 import { FeaturesComponent } from './features/features.component';
 import { FooterComponent } from './footer/footer.component';
+<<<<<<< HEAD
 import { IntroQuizComponent } from './intro-quiz/intro-quiz.component';
 import { QuizComponent } from './quiz/quiz.component';
 import {DragDropModule} from '@angular/cdk/drag-drop';
 import { CartComponent } from './cart/cart.component';
+=======
+import { SupportComponent } from './support/support.component';
+
+
+
+>>>>>>> fccebbf5701f08666aa2e0ae97c986840f8f479c
 
 @NgModule({
   declarations: [
@@ -40,8 +47,13 @@ import { CartComponent } from './cart/cart.component';
     LandingPageComponent,
     FeaturesComponent,
     FooterComponent,
+<<<<<<< HEAD
     IntroQuizComponent,
     QuizComponent,
+=======
+    SupportComponent,
+
+>>>>>>> fccebbf5701f08666aa2e0ae97c986840f8f479c
   ],
   imports: [
     BrowserModule,
