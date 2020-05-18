@@ -4,6 +4,12 @@
   left: 0;
   right: 0;
   bottom: 100%;
+
+}
+
+.spacer{
+  margin-top: 50px;
+  margin-bottom: 10px;
 }
 
 .pageContent{
