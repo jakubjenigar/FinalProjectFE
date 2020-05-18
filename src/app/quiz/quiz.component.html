@@ -4,54 +4,34 @@
   <div
     id="all"
     cdkDropList
-    [cdkDropListData]="all"
-    cdkDropListConnectedTo="question1, question2"
+    [cdkDropListData]="answers"
+    cdkDropListConnectedTo="question"
     class="example-list"
     (cdkDropListDropped)="drop($event)"
     [cdkDropListEnterPredicate]="noReturnPredicate">
     <div
       class="example-box"
-      *ngFor="let number of all"
-      [cdkDragData]="number"
-      cdkDrag>{{number}}</div>
+      *ngFor="let number of answers"
+      [cdkDragData]="answers"
+      cdkDrag>{{ number }}</div>
   </div>
 </div>
 
 <div class="example-container">
-  <h2>Question 1: When is Earth day?</h2>
+  <h2>Ways to help the environment</h2>
 
   <div
-    id="question1"
+    id="question"
     cdkDropList
-    [cdkDropListData]="even"
+    [cdkDropListData]="submitted"
     cdkDropListConnectedTo="all"
     class="example-list"
     (cdkDropListDropped)="drop($event)"
-    [cdkDropListEnterPredicate]="evenPredicate">
+    [cdkDropListEnterPredicate]="">
     <div
       class="example-box"
-      *ngFor="let number of even"
+      *ngFor="let number of submitted"
       cdkDrag>{{number}}</div>
+      <button type="submit" (click)="submit()">Submit</button>
   </div>
 </div>
-
-<div class="example-container">
-  <h2>Question 2: When is my day?</h2>
-
-  <div
-    id="question2"
-    cdkDropList
-    [cdkDropListData]="even"
-    cdkDropListConnectedTo="all"
-    class="example-list"
-    (cdkDropListDropped)="drop($event)"
-    [cdkDropListEnterPredicate]="evenPredicate">
-    <div
-      class="example-box"
-      *ngFor="let number of second"
-      cdkDrag
-      [cdkDragData]="number">{{number}}</div>
-  </div>
-</div>
-
-

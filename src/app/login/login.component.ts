@@ -36,9 +36,9 @@ export class LoginComponent implements OnInit {
           (response) =>  {
           //  console.log(response, JSON.stringify(response));
             if (response !== null) {
-                alert('Hello user'); // navigation to somewhere
-                localStorage.setItem('customerId', response['customerId']); // use almost the same shit for admin login if you need it
-              }
+              sessionStorage.setItem('customerId', response['customerId']);
+              this.router.navigate(['']);
+            }
           },
           (error) => {
             console.log(error);

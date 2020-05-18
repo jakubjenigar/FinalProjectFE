@@ -11,13 +11,33 @@ import {
   templateUrl: './quiz.component.html',
   styleUrls: ['./quiz.component.css'],
 })
+
 export class QuizComponent implements OnInit {
   constructor() {}
-  all = [1, 2, 3, 4, 5, 6, 7, 8, 9];
-  second = [1, 2, 3];
-  even = [10];
+  answers = [
+  'Save water',
+  'Use plastic straws',
+  'Recycle paper',
+  'Use as much plastic as possible',
+  'Use reusable bags',
+  'Throw you rubbish on the ground',
+  'Use public transportation',
+  'Use glass bottles over plastic bottles',
+  'Cut trees',
+  'Use cars to go everywhere'
+];
 
-  drop(event: CdkDragDrop<number[]>) {
+submitted = [];
+
+correct = [
+  'Save water',
+  'Recycle paper',
+  'Use reusable bags',
+  'Use public transportation',
+  'Use glass bottles over plastic bottles'
+];
+
+  drop(event: CdkDragDrop<string[]>) {
     if (event.previousContainer === event.container) {
       moveItemInArray(
         event.container.data,
@@ -35,13 +55,23 @@ export class QuizComponent implements OnInit {
   }
 
   /** Predicate function that only allows even numbers to be dropped into a list. */
-  evenPredicate(item: CdkDrag<number>) {
-    return item.data % 1 === 0;
+  correctPredicate(item: CdkDrag<string>) {
+  //  return this.correct;
   }
 
   /** Predicate function that doesn't allow items to be dropped into a list. */
   noReturnPredicate() {
     return false;
   }
+
+  submit() {
+   // console.log(this.submitted);
+    if (JSON.stringify(this.submitted).length === JSON.stringify(this.correct).length) {
+      alert('Great job! You have read our articles :)');
+    } else {
+      alert('Sorry! Go back and read the articles again :/');
+    }
+  }
+
   ngOnInit() {}
 }

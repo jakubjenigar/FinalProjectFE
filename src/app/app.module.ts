@@ -22,18 +22,12 @@ import { IntroCardComponent } from './intro-card/intro-card.component';
 import { LandingPageComponent } from './landing-page/landing-page.component';
 import { FeaturesComponent } from './features/features.component';
 import { FooterComponent } from './footer/footer.component';
-
-
 import { QuizComponent } from './quiz/quiz.component';
 import {DragDropModule} from '@angular/cdk/drag-drop';
 import { CartComponent } from './cart/cart.component';
-
 import { SupportComponent } from './support/support.component';
 import { ThanksComponent } from './thanks/thanks.component';
 import { AboutComponent } from './about/about.component';
-
-
-
 
 @NgModule({
   declarations: [

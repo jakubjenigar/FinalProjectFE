@@ -1,16 +1,14 @@
 <mat-toolbar>
   <mat-toolbar-row>
- 
-  <button class="menubutton" mat-button routerLink="">Home</button>
-  <button class="menubutton" routerLink="about" mat-button>About</button>
-  <button class="menubutton" mat-button>Quiz</button>
-  <button class="menubutton" mat-button>Contact</button>
-  <button class="menubutton" mat-button routerLink="learn">Learn</button>
-  <button class="menubutton" mat-button routerLink="support">Support</button>
-    <span class="example-spacer"></span>
-    <button class="menubutton" mat-button routerLink="login">Log In</button>
-    <button class="menubutton" mat-button routerLink="sign_up">Sign Up</button>
 
+  <button class="menubutton" mat-button routerLink="">Home</button>
+  <button class="menubutton" routerLink="about" mat-button>About</button>  <button mat-button>Quiz</button>
+  <button class="menubutton" mat-button routerLink="learn">Learn</button>
+  <button class="menubutton" mat-button routerLink="shop">Shop</button>
+    <span class="example-spacer"></span>
+    <button class="menubutton" mat-button routerLink="login" *ngIf="!isLoggedIn()">Log In</button>
+    <button class="menubutton" mat-button routerLink="" *ngIf="isLoggedIn()" (click)="logout()">Logout</button>
+    <button class="menubutton" mat-button routerLink="sign_up" *ngIf="!isLoggedIn()">Sign Up</button>
   </mat-toolbar-row>
 
 
