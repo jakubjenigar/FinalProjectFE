@@ -10,14 +10,16 @@
     width: 40%;
   }
   
-  .articlecard {
+  .thankscard {
     flex: auto;
     position: relative;
     width: 86%;
     text-align: center;
     margin-left: 100px;
     margin-right: 100px;
-    margin-bottom: 0%;    
+    margin-top: 100px;
+    margin-bottom: 0%;  
+    min-height: 500px;  
     
     background-color: rgba(255,255,255,0.7);
     }
@@ -25,8 +27,8 @@
 
     .articlewhite {
         background-color: white;
-     
-        padding-top: 40px;
+      min-height: 500px;
+        padding-top: 45px;
     }
 
     .mat-tab-label.mat-tab-label-active {
@@ -35,40 +37,34 @@
         color: #ffffff;
     }
 
-
-    ::ng-deep .mat-tab-labels {
-      margin-left: 100px;
-    }
-
-    ::ng-deep .mat-tab-label {
-       
+    .mat-tab-label {
+        background-color: white;
         color: #ffffff;
-        opacity: 1;
-      }
-   
-
-      ::ng-deep .mat-tab-label, .mat-tab-link {
-        color: white; 
-        opacity: 1;
       }
 
-      
+      .mat-tab-labels {
+        background-color: white!important;
+        color: #ffffff !important;
+      }    
+
+      .mat-tab-group.mat-primary .mat-ink-bar {
+        background-color: white;
+    }
     
-  .articleimg {
-    width: 74%;
+  .thanksimg {
+    width: 14%;
     margin-bottom:20px;
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
   }
 
-.articletext {
+.thankstext {
     margin-left: 150px;
     margin-right: 140px;
-    text-align: left;
+    text-align: center;
     line-height: 30px;
-    text-align: justify;
-    text-justify: inter-word;
+    font-size: 20px;
 }
   
 
@@ -90,8 +86,7 @@
 
 
   mat-tab-group {
-      margin-top: 50px;
-      
+      margin-top: 60px;
 
   }
   
