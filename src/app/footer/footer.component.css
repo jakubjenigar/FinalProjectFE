@@ -21,6 +21,8 @@
       margin-top: -5px;
     }
 
+
+    .page-footer {background-color: rgba(0, 85, 150,1);}
   li {
       text-decoration: none;
       color: white;
@@ -39,3 +41,5 @@
       padding-top: 30px;
       padding-left: 80px;
   }
+
+  

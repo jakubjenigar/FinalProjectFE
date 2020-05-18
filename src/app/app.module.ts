@@ -26,6 +26,8 @@ import { QuizComponent } from './quiz/quiz.component';
 import {DragDropModule} from '@angular/cdk/drag-drop';
 import { CartComponent } from './cart/cart.component';
 import { SupportComponent } from './support/support.component';
+import { ThanksComponent } from './thanks/thanks.component';
+import { AboutComponent } from './about/about.component';
 
 @NgModule({
   declarations: [
@@ -42,6 +44,8 @@ import { SupportComponent } from './support/support.component';
     FooterComponent,
     QuizComponent,
     SupportComponent,
+    ThanksComponent,
+    AboutComponent ,
   ],
   imports: [
     BrowserModule,
@@ -63,7 +67,8 @@ import { SupportComponent } from './support/support.component';
     MatFormFieldModule,
     MatInputModule,
     MatToolbarModule,
-    DragDropModule
+    DragDropModule,
+
   ],
   schemas: [CUSTOM_ELEMENTS_SCHEMA],
   providers: [],
