@@ -1,9 +1,10 @@
 import { Item } from './../models/item.model';
 import { Component, OnInit } from '@angular/core';
 import { ItemService } from '../services/item.service';
-
+import { CartService } from '../services/cart.service';
 import { Router, ActivatedRoute } from '@angular/router';
 import { SupportComponent } from '../support/support.component';
+import { Observable } from 'rxjs';
 
 @Component({
   selector: 'app-item',
@@ -19,13 +20,13 @@ export class ItemComponent implements OnInit {
 
     this.retrieveItem();
 
-    
 
   }
 
   constructor(
 
   private itemService: ItemService,
+  private cartService: CartService,
   private router: Router,
   private route: ActivatedRoute,
   supportComponent: SupportComponent,
@@ -36,7 +37,22 @@ export class ItemComponent implements OnInit {
   getItem(id) {
     this.itemService.get(id).subscribe();
 
-  
+  }
+
+  addToCart(id) {
+
+    if (!localStorage.getItem('cardId')) {
+      const response = this.getCardId();
+    }
+
+
+  }
+
+  getCardId(): any {
+    const customerID = localStorage.getItem('customerId');
+    this.cartService.getId(customerID).subscribe( (response) => {
+      localStorage.setItem('cartId', response['cartId']);
+    });
   }
 
   retrieveItem() {
@@ -53,10 +69,8 @@ export class ItemComponent implements OnInit {
 
   }
 
- 
 
 }
 
- 
 
 

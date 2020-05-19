@@ -37,4 +37,8 @@ export class CartService {
   delete(id) {
     return this.http.delete(`${baseUrl}/${id}`);
   }
+
+  getId(id) {
+    return this.http.post(`${baseUrl}/${id}`, id);
+  }
 }
