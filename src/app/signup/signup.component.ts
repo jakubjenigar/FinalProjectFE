@@ -10,7 +10,7 @@ import { FormGroup, FormControl } from '@angular/forms';
   styleUrls: ['./signup.component.css']
 })
 export class SignupComponent implements OnInit {
- // customer: Customer;
+
   customer = {
     firstName: '',
     lastName: '',
@@ -35,8 +35,7 @@ export class SignupComponent implements OnInit {
     birthDate: new FormControl(),
   });
 
-  ngOnInit() {
-  }
+  ngOnInit() { }
 
   signup() {
     const data = {
@@ -47,6 +46,7 @@ export class SignupComponent implements OnInit {
       email: this.customer.email,
       birthDate: this.customer.birthDate
     };
+
     console.log(data);
     if (data.firstName !== '' && data.lastName !== ''
       && data.username !== '' && data.pass !== ''
@@ -55,8 +55,8 @@ export class SignupComponent implements OnInit {
         this.customerService.create(data).subscribe(
           response => {
             console.log(response);
-          //  this.router.navigate(['log_in']);
             alert('Successfully created account');
+            this.router.navigate(['login']);
           },
           error => {
             console.log(error);
@@ -64,8 +64,7 @@ export class SignupComponent implements OnInit {
           }
           );
       } else {
-       // this.snackBar.open('Please fill out all the fields', 'Dismiss');
-       alert('Invalid information. Please try again');
-      }
+      alert('Invalid information. Please try again');
+    }
   }
 }

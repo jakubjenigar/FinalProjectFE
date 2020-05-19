@@ -1,4 +1,3 @@
-import { Item } from './../models/item.model';
 import { Component, OnInit } from '@angular/core';
 import { ItemService } from '../services/item.service';
 import { CartService } from '../services/cart.service';
@@ -11,27 +10,21 @@ import { Observable } from 'rxjs';
   templateUrl: './item.component.html',
   styleUrls: ['./item.component.css']
 })
-export class ItemComponent implements OnInit {
 
+export class ItemComponent implements OnInit {
   item: any;
 
   ngOnInit() {
     this.getItem(this.route.snapshot.paramMap.get('id'));
-
     this.retrieveItem();
-
-
   }
 
   constructor(
-
   private itemService: ItemService,
   private cartService: CartService,
   private router: Router,
   private route: ActivatedRoute,
   supportComponent: SupportComponent,
-
-
   ) { }
 
   getItem(id) {
@@ -53,6 +46,7 @@ export class ItemComponent implements OnInit {
     this.cartService.getId(customerID).subscribe( (response) => {
       localStorage.setItem('cartId', response['cartId']);
     });
+
   }
 
   retrieveItem() {
@@ -65,12 +59,11 @@ export class ItemComponent implements OnInit {
         console.log(error);
       }
     );
-
-
   }
-
-
 }
+
+
+
 
 
 

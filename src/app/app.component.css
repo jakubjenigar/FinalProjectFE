@@ -4,10 +4,16 @@
   left: 0;
   right: 0;
   bottom: 100%;
+
+}
+
+.spacer{
+  margin-top: 50px;
+  margin-bottom: 10px;
 }
 
 .pageContent{
-  background-color: rgba(0, 85, 150,1);
+  background-color: white;
   overflow-x: hidden;
 }
 

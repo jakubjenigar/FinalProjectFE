@@ -3,97 +3,93 @@
   }
   .cta{
     background-color: white;
-
+  
   }
-
+  
   .featureimg {
     width: 40%;
   }
-
-  .articlecard {
+  
+  .thankscard {
     flex: auto;
     position: relative;
     width: 86%;
     text-align: center;
     margin-left: 100px;
     margin-right: 100px;
-    margin-bottom: 5%;
-    margin-top: 10px;
-
-    background-color: rgb(82, 133, 187);
+    margin-top: 100px;
+    margin-bottom: 0%;  
+    min-height: 500px;  
+    
+    background-color: rgba(255,255,255,0.7);
     }
-
+  
 
     .articlewhite {
         background-color: white;
-
-        padding-top: 40px;
+      min-height: 500px;
+        padding-top: 45px;
     }
 
     .mat-tab-label.mat-tab-label-active {
-        /*background-color: #00dff0;*/
-        opacity: 1;
-
-    }
-
-
-    ::ng-deep .mat-tab-labels {
-      /*margin-left: 100px;*/
-      background-color: white;
-    }
-
-
-      ::ng-deep .mat-tab-label, .mat-tab-link {
-        color: #000000;
         background-color: white;
         opacity: 1;
+        color: #ffffff;
+    }
+
+    .mat-tab-label {
+        background-color: white;
+        color: #ffffff;
       }
 
+      .mat-tab-labels {
+        background-color: white!important;
+        color: #ffffff !important;
+      }    
 
-
-  .articleimg {
-    width: 74%;
+      .mat-tab-group.mat-primary .mat-ink-bar {
+        background-color: white;
+    }
+    
+  .thanksimg {
+    width: 14%;
     margin-bottom:20px;
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
   }
 
-.articletext {
+.thankstext {
     margin-left: 150px;
     margin-right: 140px;
-    text-align: left;
+    text-align: center;
     line-height: 30px;
-    text-align: justify;
-    text-justify: inter-word;
+    font-size: 20px;
 }
-
+  
 
 
   .items{
     margin-top: 110px;
-
-
+    
+    
     background-color: rgba(255,255,255,0.7);
   }
-
+    
 
 .quiz{
         background-color: rgba(0, 85, 150,1);
         color: white;
-
       }
 
-
+      
 
 
   mat-tab-group {
-      margin-top: 5%;
-
-
+      margin-top: 60px;
 
   }
-
+  
     .grid{
       display: flex;
       flex-wrap: wrap;
@@ -101,21 +97,16 @@
       background-color: rgba(255,255,255,0.7);
       padding-top: 20px;
       padding-bottom: 20px;
-
     }
-
+  
     mat-card-title {
       font-size: 24px;
     }
-
+  
     mat-card-subtitle{
       padding-left: 10px;
       padding-right: 10px;
-
+      
     }
-
-
-
-.mat-card > .mat-card-actions:last-child{
-  margin-bottom: 50px;
-}
+  
+    
