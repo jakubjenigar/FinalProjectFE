@@ -30,5 +30,6 @@ const routes: Routes = [
 export class AppRoutingModule { }
 
 
+// tslint:disable-next-line:max-line-length
 export const routingComponents = [LandingPageComponent, LoginComponent, SignupComponent, SupportComponent, CartComponent, AboutComponent, LearnComponent];
 
