@@ -3,7 +3,12 @@
   position: relative;
   max-width: 280px;
   min-width: 200px;
-  min-height: 250px;
+
+  min-height: 400px;
+  height: 450px;
+  max-height: 450px;
+
+
   text-align: center;
   padding-left: 0%;
   padding-right: 0%;
@@ -14,15 +19,33 @@
   background-color: white;
   }
 
-  
+#description{
+  margin-bottom: 20px;
+}
+#price{
+
+}
+
 .itemimg {
+  padding-top: 10px;
+  width: 90%;
+  max-width: 500px;
+  max-height: 240px;
+}
+
+.items{
+  margin-top: 100px;
+  margin-left: 100px;
+  margin-right: 100px;
+  margin-bottom: 100px;
+  background-color: rgba(255,255,255,0.7);
+
   padding-top: 30px;
   margin-top: 20px; 
   max-width:240px; 
   max-height: 240px;
 }
 
-  
 
 
   .grid{
@@ -47,9 +70,15 @@
     color: white;
   }
 
+  .mat-raised-button{
+    background-color: rgba(0, 85, 150,1) !important;
+    color: white;
+  }
+
 
 .mat-card{
 padding: 0px;
 margin-top: 64px;
 
 }
+
