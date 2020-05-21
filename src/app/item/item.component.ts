@@ -16,6 +16,7 @@ export class ItemComponent implements OnInit {
   ngOnInit() {
     this.getItem(this.route.snapshot.paramMap.get('id'));
     this.retrieveItem();
+    this.cartService.validate();
   }
 
   constructor(
@@ -28,19 +29,19 @@ export class ItemComponent implements OnInit {
   addToCart(id) {
     if (!sessionStorage.getItem('cartId')) {
 
-      if (!sessionStorage.getItem('customerId')) {
+      this.addItemToCard(id);
 
-        const customerID = '0';
-        console.log(sessionStorage.getItem('customerId'));
-        const response = this.getCardId(customerID);
-        this.addItemToCard(id);
-      } else {
-
-        const customerID = sessionStorage.getItem('customerId');
-        console.log(sessionStorage.getItem('customerId'));
-        const response = this.getCardId(customerID);
-        this.addItemToCard(id);
-      }
+      // if (!sessionStorage.getItem('customerId')) {
+      //   const customerID = '0';
+      //   console.log(sessionStorage.getItem('customerId'));
+      //   const response = this.getCardId(customerID);
+      //    this.addItemToCard(id);
+      // } else {
+      //   const customerID = sessionStorage.getItem('customerId');
+      //   console.log(sessionStorage.getItem('customerId'));
+      //   const response = this.getCardId(customerID);
+      //   this.addItemToCard(id);
+      // }
 
     } else {
       this.addItemToCard(id);

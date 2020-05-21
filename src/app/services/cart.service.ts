@@ -41,4 +41,18 @@ export class CartService {
   getId(id) {
     return this.http.post(`${baseUrl}/${id}`, id);
   }
+
+  validate() {
+    if (!sessionStorage.getItem('customerId')) {
+      this.getId('0')
+      .subscribe( (response) => {
+        sessionStorage.setItem('cartId', response['cartId']);
+      });
+    } else {
+      this.getId(sessionStorage.getItem('customerId'))
+      .subscribe( (response) => {
+        sessionStorage.setItem('cartId', response['cartId']);
+      });
+    }
+  }
 }

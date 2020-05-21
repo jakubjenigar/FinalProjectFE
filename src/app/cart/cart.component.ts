@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { CartItemService } from '../services/cartitem.service';
+import { CartService } from '../services/cart.service';
 import { Observable } from 'rxjs';
 
 
@@ -13,7 +14,7 @@ import { Observable } from 'rxjs';
 
 export class CartComponent implements OnInit {
 
-  constructor(private cartItemService: CartItemService) {}
+  constructor(private cartItemService: CartItemService, private cartService: CartService) {}
 
   data: Observable<any>;
   deleteList: any = [];
@@ -22,12 +23,16 @@ export class CartComponent implements OnInit {
   displayedColumns: string[] = ['checked', 'picture', 'itemName', 'description', 'price'];
 
   ngOnInit() {
-     this.data = this.cartItemService.getItems(sessionStorage.getItem('cartId'));
-     this.data.subscribe( (response) => {
-      this.data = response;
-      console.log(this.data, 'This is data');
-    });
+    this.cartService.validate();
+    this.loadList();
     // this.geItems(sessionStorage.getItem('cartId'));
+  }
+
+  loadList() {
+    this.data = this.cartItemService.getItems(sessionStorage.getItem('cartId'));
+    this.data.subscribe( (response) => {
+      this.data = response;
+    });
   }
 
   onChange(event, element) {
@@ -56,7 +61,6 @@ export class CartComponent implements OnInit {
     this.data = this.cartItemService.getItems(sessionStorage.getItem('cartId'));
     this.data.subscribe( (response) => {
     this.data = response;
-    console.log(this.data, 'This is data');
     });
 
   }
