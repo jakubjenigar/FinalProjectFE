@@ -1,5 +1,9 @@
+<div class="test">
+  <mat-card class="thankscard">
+
+    <mat-card-subtitle>Select the answer you want to pick and move the mouse cursor to the empty box on the right. Release the mouse button to drop the answer. </mat-card-subtitle>
 <div class="example-container">
-  <h2>Answers</h2>
+  <mat-card-title>Answers</mat-card-title>
 
   <div
     id="all"
@@ -17,8 +21,8 @@
   </div>
 </div>
 
-<div class="example-container">
-  <h2>Ways to help the environment</h2>
+<div class="example-container2">
+  <mat-card-title>Ways to help the environment</mat-card-title>
 
   <div
     id="question"
@@ -32,6 +36,11 @@
       class="example-box"
       *ngFor="let number of submitted"
       cdkDrag>{{number}}</div>
-      <button type="submit" (click)="submit()">Submit</button>
+     
   </div>
+  <mat-card-actions>
+    <button class="submit" mat-raised-button (click)="submit()">Submit</button>
+  </mat-card-actions>
+</div>
+</mat-card>
 </div>
