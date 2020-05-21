@@ -18,6 +18,8 @@ export class CartComponent implements OnInit {
 
   data: Observable<any>;
   deleteList: any = [];
+  prices: any;
+  totalPrice: Observable<number>;
 
   lastAction: string;
   displayedColumns: string[] = ['checked', 'picture', 'itemName', 'description', 'price'];
@@ -29,9 +31,13 @@ export class CartComponent implements OnInit {
   }
 
   loadList() {
+    const reducer = (accumulator, currentValue) => accumulator + parseInt(currentValue.Price, 10);
+
     this.data = this.cartItemService.getItems(sessionStorage.getItem('cartId'));
     this.data.subscribe( (response) => {
       this.data = response;
+      this.prices = this.data;
+      this.totalPrice = this.prices.reduce(reducer, 0);
     });
   }
 
@@ -44,7 +50,7 @@ export class CartComponent implements OnInit {
         this.deleteList.splice(index, 1);
         console.log(index);
     } else {
-        this.deleteList.push(element.CartItemId);
+        this.deleteList.push(element);
     }
 
     console.log( event, element, this.deleteList);
@@ -54,14 +60,14 @@ export class CartComponent implements OnInit {
 
     data.forEach(element => {
       this.cartItemService
-      .delete(element)
+      .delete(element.CartItemId)
       .subscribe();
     });
-
-    this.data = this.cartItemService.getItems(sessionStorage.getItem('cartId'));
-    this.data.subscribe( (response) => {
-    this.data = response;
-    });
+    this.loadList();
+    // this.data = this.cartItemService.getItems(sessionStorage.getItem('cartId'));
+    // this.data.subscribe( (response) => {
+    // this.data = response;
+    // });
 
   }
 
