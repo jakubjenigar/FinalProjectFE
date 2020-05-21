@@ -36,6 +36,7 @@ export class LoginComponent implements OnInit {
           (response) =>  {
           //  console.log(response, JSON.stringify(response));
             if (response !== null) {
+              sessionStorage.clear();
               sessionStorage.setItem('customerId', response['customerId']);
               this.router.navigate(['']);
             }

@@ -8,12 +8,12 @@
 
   <mat-card-title> {{ item.itemName }} </mat-card-title>
   <mat-card-subtitle> {{ item.description }} </mat-card-subtitle>
-  <mat-card-title> {{ item.price }} </mat-card-title>
+  <mat-card-title> {{ item.price }} kr</mat-card-title>
 
 
 
   <mat-card-actions>
-    <button class="buy" mat-raised-button (click)="getItem(item.itemId)">Buy</button>
+    <button class="buy" mat-raised-button (click)="addToCart(item.itemId)">Buy</button>
   </mat-card-actions>
 
 </mat-card>

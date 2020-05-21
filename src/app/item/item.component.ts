@@ -1,7 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { ItemService } from '../services/item.service';
+import { CartItemService} from '../services/cartitem.service';
+import { CartService } from '../services/cart.service';
 import { Router, ActivatedRoute } from '@angular/router';
-import { SupportComponent } from '../support/support.component';
 
 @Component({
   selector: 'app-item',
@@ -15,17 +16,64 @@ export class ItemComponent implements OnInit {
   ngOnInit() {
     this.getItem(this.route.snapshot.paramMap.get('id'));
     this.retrieveItem();
+    this.cartService.validate();
   }
 
   constructor(
   private itemService: ItemService,
-  private router: Router,
+  private cartService: CartService,
+  private cartItemService: CartItemService,
   private route: ActivatedRoute,
-  supportComponent: SupportComponent,
   ) { }
 
+  addToCart(id) {
+    if (!sessionStorage.getItem('cartId')) {
+
+      this.addItemToCard(id);
+
+      // if (!sessionStorage.getItem('customerId')) {
+      //   const customerID = '0';
+      //   console.log(sessionStorage.getItem('customerId'));
+      //   const response = this.getCardId(customerID);
+      //    this.addItemToCard(id);
+      // } else {
+      //   const customerID = sessionStorage.getItem('customerId');
+      //   console.log(sessionStorage.getItem('customerId'));
+      //   const response = this.getCardId(customerID);
+      //   this.addItemToCard(id);
+      // }
+
+    } else {
+      this.addItemToCard(id);
+
+    }
+
+  }
+
   getItem(id) {
+
     this.itemService.get(id).subscribe();
+
+  }
+
+  getCardId(id): any {
+
+    this.cartService
+    .getId(id)
+    .subscribe( (response) => {
+      sessionStorage.setItem('cartId', response['cartId']);
+    });
+
+  }
+
+  addItemToCard(id): any {
+    const data = {
+      cartId: sessionStorage.getItem('cartId'),
+      itemId: id
+    };
+
+    console.log(data);
+    this.cartItemService.create(data).subscribe();
   }
 
   retrieveItem() {
@@ -40,5 +88,9 @@ export class ItemComponent implements OnInit {
     );
   }
 }
+
+
+
+
 
 

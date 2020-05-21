@@ -37,4 +37,22 @@ export class CartService {
   delete(id) {
     return this.http.delete(`${baseUrl}/${id}`);
   }
+
+  getId(id) {
+    return this.http.post(`${baseUrl}/${id}`, id);
+  }
+
+  validate() {
+    if (!sessionStorage.getItem('customerId') && !sessionStorage.getItem('cartId')) {
+      this.getId('0')
+      .subscribe( (response) => {
+        sessionStorage.setItem('cartId', response['cartId']);
+      });
+    } else {
+      this.getId(sessionStorage.getItem('customerId'))
+      .subscribe( (response) => {
+        sessionStorage.setItem('cartId', response['cartId']);
+      });
+    }
+  }
 }
