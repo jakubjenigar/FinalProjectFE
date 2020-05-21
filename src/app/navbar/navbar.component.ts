@@ -24,7 +24,7 @@ export class NavbarComponent implements OnInit {
 
   logout() {
     // remove user from session storage to log user out
-    sessionStorage.removeItem('customerId');
+    sessionStorage.clear();
     this.isLoggedin = false;
   }
 
