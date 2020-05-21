@@ -37,4 +37,8 @@ export class CartItemService {
   delete(id) {
     return this.http.delete(`${baseUrl}/${id}`);
   }
+
+  getItems(id) {
+    return this.http.get(`${baseUrl}/items/${id}`);
+  }
 }

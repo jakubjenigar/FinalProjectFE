@@ -1,9 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { ItemService } from '../services/item.service';
+import { CartItemService} from '../services/cartitem.service';
 import { CartService } from '../services/cart.service';
 import { Router, ActivatedRoute } from '@angular/router';
-import { SupportComponent } from '../support/support.component';
-import { Observable } from 'rxjs';
 
 @Component({
   selector: 'app-item',
@@ -22,31 +21,58 @@ export class ItemComponent implements OnInit {
   constructor(
   private itemService: ItemService,
   private cartService: CartService,
-  private router: Router,
+  private cartItemService: CartItemService,
   private route: ActivatedRoute,
-  supportComponent: SupportComponent,
   ) { }
 
+  addToCart(id) {
+    if (!sessionStorage.getItem('cartId')) {
+
+      if (!sessionStorage.getItem('customerId')) {
+
+        const customerID = '0';
+        console.log(sessionStorage.getItem('customerId'));
+        const response = this.getCardId(customerID);
+        this.addItemToCard(id);
+      } else {
+
+        const customerID = sessionStorage.getItem('customerId');
+        console.log(sessionStorage.getItem('customerId'));
+        const response = this.getCardId(customerID);
+        this.addItemToCard(id);
+      }
+
+    } else {
+      this.addItemToCard(id);
+
+    }
+
+  }
+
   getItem(id) {
+
     this.itemService.get(id).subscribe();
 
   }
 
-  addToCart(id) {
+  getCardId(id): any {
 
-    if (!localStorage.getItem('cardId')) {
-      const response = this.getCardId();
-    }
-
+    this.cartService
+    .getId(id)
+    .subscribe( (response) => {
+      sessionStorage.setItem('cartId', response['cartId']);
+    });
 
   }
 
-  getCardId(): any {
-    const customerID = localStorage.getItem('customerId');
-    this.cartService.getId(customerID).subscribe( (response) => {
-      localStorage.setItem('cartId', response['cartId']);
-    });
+  addItemToCard(id): any {
+    const data = {
+      cartId: sessionStorage.getItem('cartId'),
+      itemId: id
+    };
 
+    console.log(data);
+    this.cartItemService.create(data).subscribe();
   }
 
   retrieveItem() {
