@@ -22,7 +22,11 @@
     }
 
 
-    .page-footer {background-color: rgba(0, 85, 150,1);}
+    .page-footer {
+      background-color: rgba(0, 85, 150,1);
+
+
+    }
   li {
       text-decoration: none;
       color: white;
@@ -42,4 +46,3 @@
       padding-left: 80px;
   }
 
-  

@@ -7,13 +7,13 @@
   class="itemimg">
 
   <mat-card-title> {{ item.itemName }} </mat-card-title>
-  <mat-card-subtitle> {{ item.description }} </mat-card-subtitle>
-  <mat-card-title> {{ item.price }} kr</mat-card-title>
+  <mat-card-subtitle id="description"> {{ item.description }} </mat-card-subtitle>
+  <mat-card-title id="price"> {{ item.price }} kr</mat-card-title>
 
 
 
   <mat-card-actions>
-    <button class="buy" mat-raised-button (click)="addToCart(item.itemId)">Buy</button>
+    <button  mat-raised-button (click)="addToCart(item.itemId)"> <span class="material-icons"> add_shopping_cart</span> Add to card</button>
   </mat-card-actions>
 
 </mat-card>
