@@ -43,7 +43,7 @@ export class CartService {
   }
 
   validate() {
-    if (!sessionStorage.getItem('customerId')) {
+    if (!sessionStorage.getItem('customerId') && !sessionStorage.getItem('cartId')) {
       this.getId('0')
       .subscribe( (response) => {
         sessionStorage.setItem('cartId', response['cartId']);

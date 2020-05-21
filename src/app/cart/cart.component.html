@@ -33,7 +33,7 @@
            [ngClass]="{hovered: row.hovered, highlighted: row.highlighted}"  (mouseover)="row.hovered = true" (mouseout)="row.hovered = false"></mat-row>
     </mat-table>
     <mat-card-actions>
-      <button class="deleteAll" mat-raised-button (click)="deleteCheckedItems(deleteList)">Delete selected</button>
+      <button class="deleteAll" mat-raised-button (click)="deleteCheckedItems()">Delete selected</button>
     </mat-card-actions>
     <h1>{{totalPrice}} kr</h1>
 </div>

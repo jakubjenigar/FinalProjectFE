@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { CartItemService } from '../services/cartitem.service';
 import { CartService } from '../services/cart.service';
 import { Observable } from 'rxjs';
-
+import { map } from 'rxjs/operators';
 
 @Component({
   selector: 'app-cart',
@@ -56,17 +56,22 @@ export class CartComponent implements OnInit {
     console.log( event, element, this.deleteList);
   }
 
-  deleteCheckedItems(data) {
+  async deleteCheckedItems() {
+    // const reducer = (accumulator, currentValue) => accumulator + parseInt(currentValue.Price, 10);
 
-    data.forEach(element => {
+    await this.deleteList.forEach(element => {
       this.cartItemService
       .delete(element.CartItemId)
-      .subscribe();
+      .toPromise()
+      .then((result) => {
+        this.loadList();
     });
-    this.loadList();
+    });
     // this.data = this.cartItemService.getItems(sessionStorage.getItem('cartId'));
     // this.data.subscribe( (response) => {
     // this.data = response;
+    // this.prices = this.data;
+    // this.totalPrice = this.prices.reduce(reducer, 0);
     // });
 
   }

@@ -1,112 +1,118 @@
 ::-webkit-scrollbar {
-    display: none;
-  }
-  .cta{
-    background-color: white;
+  display: none;
+}
+.cta{
+  background-color: white;
+
+}
+
+.featureimg {
+  width: 40%;
+}
+
+.thankscard {
+  flex: auto;
+  position: relative;
+  width: 86%;
+  text-align: center;
+  margin-left: 100px;
+  margin-right: 100px;
+  margin-top: 64px;
+  padding-top: 30px;
+  padding-bottom: 20px;  
+  min-height: 500px;  
   
+  background-color: white;
+  }
+
+  .test {
+    background-color: #a7beda;
+    padding-bottom: 20px;
+    padding-top: 20px;
+  }
+
+  .articlewhite {
+      background-color: white;
+    min-height: 500px;
+      padding-top: 45px;
+  }
+
+  .mat-tab-label.mat-tab-label-active {
+      background-color: white;
+      opacity: 1;
+      color: #ffffff;
+  }
+
+  .mat-tab-label {
+      background-color: white;
+      color: #ffffff;
+    }
+
+    .mat-tab-labels {
+      background-color: white!important;
+      color: #ffffff !important;
+    }    
+
+    .mat-tab-group.mat-primary .mat-ink-bar {
+      background-color: white;
   }
   
-  .featureimg {
-    width: 40%;
-  }
-  
-  .thankscard {
-    flex: auto;
-    position: relative;
-    width: 86%;
-    text-align: center;
-    margin-left: 100px;
-    margin-right: 100px;
-    margin-top: 100px;
-    margin-bottom: 0%;  
-    min-height: 500px;  
-    
-    background-color: rgba(255,255,255,0.7);
-    }
-  
-
-    .articlewhite {
-        background-color: white;
-      min-height: 500px;
-        padding-top: 45px;
-    }
-
-    .mat-tab-label.mat-tab-label-active {
-        background-color: white;
-        opacity: 1;
-        color: #ffffff;
-    }
-
-    .mat-tab-label {
-        background-color: white;
-        color: #ffffff;
-      }
-
-      .mat-tab-labels {
-        background-color: white!important;
-        color: #ffffff !important;
-      }    
-
-      .mat-tab-group.mat-primary .mat-ink-bar {
-        background-color: white;
-    }
-    
-  .thanksimg {
-    width: 14%;
-    margin-bottom:20px;
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-  }
+.thanksimg {
+  width: 14%;
+  margin-bottom:20px;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
 
 .thankstext {
-    margin-left: 150px;
-    margin-right: 140px;
-    text-align: center;
-    line-height: 30px;
-    font-size: 20px;
+  margin-left: 150px;
+  margin-right: 140px;
+  text-align: center;
+  line-height: 30px;
+  font-size: 20px;
+}
+
+
+
+.items{
+  margin-top: 110px;
+  
+  
+  background-color: rgba(255,255,255,0.7);
 }
   
 
-
-  .items{
-    margin-top: 110px;
-    
-    
-    background-color: rgba(255,255,255,0.7);
-  }
-    
-
 .quiz{
-        background-color: rgba(0, 85, 150,1);
-        color: white;
-      }
-
-      
-
-
-  mat-tab-group {
-      margin-top: 60px;
-
-  }
-  
-    .grid{
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      background-color: rgba(255,255,255,0.7);
-      padding-top: 20px;
-      padding-bottom: 20px;
+      background-color: rgba(0, 85, 150,1);
+      color: white;
     }
-  
-    mat-card-title {
-      font-size: 24px;
-    }
-  
-    mat-card-subtitle{
-      padding-left: 10px;
-      padding-right: 10px;
-      
-    }
-  
+
     
+
+
+mat-tab-group {
+    margin-top: 60px;
+
+}
+
+  .grid{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    background-color: rgba(255,255,255,0.7);
+    padding-top: 20px;
+    padding-bottom: 20px;
+  }
+
+  mat-card-title {
+    font-size: 24px;
+  }
+
+  mat-card-subtitle{
+    padding-left: 10px;
+    padding-right: 10px;
+    
+  }
+
+  
