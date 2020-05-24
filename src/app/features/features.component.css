@@ -24,8 +24,13 @@
 
   border-radius: 0px;
   background-color: white;
+
+  transition: transform .6s ease;
   }
 
+.featurecard:hover{
+transform: scale(1.05);
+}
 
 .itemimg {
   padding-top: 10px;
