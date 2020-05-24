@@ -19,6 +19,11 @@
   background-color: white;
   }
 
+.mat-card > :first-child {
+  margin-top: 10% !important;
+}
+
+
 #description{
   margin-bottom: 20px;
 }
@@ -27,7 +32,7 @@
 }
 
 .itemimg {
-  padding-top: 10px;
+  /*padding-top: 10px;*/
   width: 90%;
   max-width: 500px;
   max-height: 240px;
@@ -40,10 +45,10 @@
   margin-bottom: 100px;
   background-color: rgba(255,255,255,0.7);
 
-  padding-top: 30px;
-  margin-top: 20px; 
-  max-width:240px; 
-  max-height: 240px;
+  /*padding-top: 30px;*/
+  /*margin-top: 20px;*/
+  /*max-width:240px;*/
+  /*max-height: 240px;*/
 }
 
 
@@ -54,7 +59,12 @@
     width: 100%;
     justify-content: center;
     background-color: #a7beda;
+    margin-top: 500px;
   }
+.mat-card-image:first-child {
+  margin-top: 0px !important;
+}
+
 
   mat-card-title {
     font-size: 18px;
