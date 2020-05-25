@@ -30,6 +30,7 @@ import { ThanksComponent } from './thanks/thanks.component';
 import { AboutComponent } from './about/about.component';
 import { MatSnackBarModule } from '@angular/material';
 
+
 @NgModule({
   declarations: [
     AppComponent,
