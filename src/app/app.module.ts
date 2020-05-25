@@ -29,6 +29,7 @@ import { SupportComponent } from './support/support.component';
 import { ThanksComponent } from './thanks/thanks.component';
 import { AboutComponent } from './about/about.component';
 
+
 @NgModule({
   declarations: [
     AppComponent,
