@@ -24,17 +24,27 @@
     background-image: url("https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1000&q=80");
   }
 
-mat-card {
+
+  mat-card {
     width: 30%;
-    margin-left: 55%;
-    margin-top: 13%;
+    margin:auto;
+    margin-top: 15%;
     border-radius: 8px;
 }
+
+.loginbutton {
+
+    background-color: rgba(0, 85, 150,1);
+    color: white;
+    margin-bottom: 20px;
+  
+  }
 
 mat-form-field, mat-checkbox {
     width: 80%;
     display: block;
     margin: auto;
+    margin-top: 20px;
 }
 
 mat-card-content {
