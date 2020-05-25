@@ -75,8 +75,8 @@
   margin-right: 100px;
   margin-top: 64px;
   padding-top: 30px;
-  padding-bottom: 20px;  
-  min-height: 500px;  
+  padding-bottom: 20px;
+  min-height: 500px;
   background-color: white;
   }
 
@@ -84,5 +84,14 @@
 
       background-color: rgba(0, 85, 150,1);
       color: white;
-    
+
+  }
+
+  ::ng-deep.mat-snack-bar-container {
+    background-color: white;
+    color: black;
+  }
+
+  ::ng-deep .mat-button, .mat-icon-button, .mat-stroked-button {
+    color: rgba(0, 85, 150,1);
   }

@@ -1,9 +1,9 @@
+import { MatSnackBar } from '@angular/material';
 import { Component, OnInit } from '@angular/core';
 import { ItemService } from '../services/item.service';
 import { CartItemService} from '../services/cartitem.service';
 import { CartService } from '../services/cart.service';
 import { Router, ActivatedRoute } from '@angular/router';
-
 @Component({
   selector: 'app-item',
   templateUrl: './item.component.html',
@@ -24,6 +24,7 @@ export class ItemComponent implements OnInit {
   private cartService: CartService,
   private cartItemService: CartItemService,
   private route: ActivatedRoute,
+  private snackBar: MatSnackBar
   ) { }
 
   addToCart(id) {
@@ -42,28 +43,25 @@ export class ItemComponent implements OnInit {
       //   const response = this.getCardId(customerID);
       //   this.addItemToCard(id);
       // }
-
     } else {
       this.addItemToCard(id);
-
+      this.snackBar.open('Successfully added to cart', 'Dismiss', {
+        duration: 3000,
+        panelClass: ['mat-snack-bar-container.', 'mat-stroked-button']
+      });
     }
-
   }
 
   getItem(id) {
-
     this.itemService.get(id).subscribe();
-
   }
 
   getCardId(id): any {
-
     this.cartService
     .getId(id)
     .subscribe( (response) => {
-      sessionStorage.setItem('cartId', response['cartId']);
+    sessionStorage.setItem('cartId', response['cartId']);
     });
-
   }
 
   addItemToCard(id): any {

@@ -5,6 +5,7 @@ import {
   transferArrayItem,
   CdkDrag,
 } from '@angular/cdk/drag-drop';
+import { MatSnackBar } from '@angular/material';
 
 @Component({
   selector: 'app-quiz',
@@ -13,7 +14,8 @@ import {
 })
 
 export class QuizComponent implements OnInit {
-  constructor() {}
+  constructor( private snackBar: MatSnackBar ) {}
+
   answers = [
   'Save water',
   'Use plastic straws',
@@ -67,9 +69,15 @@ correct = [
   submit() {
    // console.log(this.submitted);
     if (JSON.stringify(this.submitted).length === JSON.stringify(this.correct).length) {
-      alert('Great job! You have read our articles :)');
+     this.snackBar.open('Great job! You are up for your new life!', 'Dismiss', {
+       duration: 3000,
+       panelClass: ['mat-snack-bar-container', 'mat-stroked-button']
+      });
     } else {
-      alert('Sorry! Go back and read the articles again :/');
+      this.snackBar.open('Sorry! You have missed the mark, go back and try again :/', 'Dismiss', {
+        duration: 3000,
+        panelClass: ['mat-snack-bar-container', 'mat-stroked-button']
+      });
     }
   }
 

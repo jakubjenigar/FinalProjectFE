@@ -2,6 +2,7 @@ import { CustomerService} from './../services/customer.service';
 import { Router, ActivatedRoute } from '@angular/router';
 import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormControl } from '@angular/forms';
+import { MatSnackBar } from '@angular/material';
 
 @Component({
   selector: 'app-login',
@@ -23,7 +24,8 @@ export class LoginComponent implements OnInit {
   constructor(
     private router: Router,
     private route: ActivatedRoute,
-    private customerService: CustomerService
+    private customerService: CustomerService,
+    private snackBar: MatSnackBar
   ) {}
 
   ngOnInit() {}
@@ -38,12 +40,18 @@ export class LoginComponent implements OnInit {
             if (response !== null) {
               sessionStorage.clear();
               sessionStorage.setItem('customerId', response['customerId']);
+              this.snackBar.open('Welcome!', 'Dismiss', {
+                duration: 3000,
+                panelClass: ['mat-snack-bar-container', 'mat-stroked-button']});
               this.router.navigate(['']);
+            } else if (response === null) {
+              this.snackBar.open('Wrong username or password :/', 'Dismiss', {
+                duration: 3000,
+                panelClass: ['mat-snack-bar-container', 'mat-stroked-button']});
             }
           },
           (error) => {
-            console.log(error);
-            alert('Wrong username or password');
+           console.log(error);
           }
         );
     }
