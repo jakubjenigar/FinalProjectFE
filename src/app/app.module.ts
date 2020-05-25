@@ -28,6 +28,7 @@ import { CartComponent } from './cart/cart.component';
 import { SupportComponent } from './support/support.component';
 import { ThanksComponent } from './thanks/thanks.component';
 import { AboutComponent } from './about/about.component';
+import { MatSnackBarModule } from '@angular/material';
 
 @NgModule({
   declarations: [
@@ -68,7 +69,7 @@ import { AboutComponent } from './about/about.component';
     MatInputModule,
     MatToolbarModule,
     DragDropModule,
-
+    MatSnackBarModule
   ],
   schemas: [CUSTOM_ELEMENTS_SCHEMA],
   providers: [],
