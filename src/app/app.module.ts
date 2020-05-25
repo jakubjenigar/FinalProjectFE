@@ -23,13 +23,13 @@ import { LandingPageComponent } from './landing-page/landing-page.component';
 import { FeaturesComponent } from './features/features.component';
 import { FooterComponent } from './footer/footer.component';
 import { QuizComponent } from './quiz/quiz.component';
-import {DragDropModule} from '@angular/cdk/drag-drop';
+import { DragDropModule } from '@angular/cdk/drag-drop';
 import { CartComponent } from './cart/cart.component';
 import { SupportComponent } from './support/support.component';
 import { ThanksComponent } from './thanks/thanks.component';
 import { AboutComponent } from './about/about.component';
-import { MatSnackBarModule } from '@angular/material';
-
+import { MatSnackBarModule, MatNativeDateModule } from '@angular/material';
+import { MatDatepickerModule } from '@angular/material/datepicker';
 
 @NgModule({
   declarations: [
@@ -70,7 +70,9 @@ import { MatSnackBarModule } from '@angular/material';
     MatInputModule,
     MatToolbarModule,
     DragDropModule,
-    MatSnackBarModule
+    MatSnackBarModule,
+    MatNativeDateModule,
+    MatDatepickerModule
   ],
   schemas: [CUSTOM_ELEMENTS_SCHEMA],
   providers: [],

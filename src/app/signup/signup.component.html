@@ -6,45 +6,42 @@
         <div style="text-align:center" class="signUp">
 
           <form [formGroup]="form">
-           
+
               <mat-form-field>
                 <input [(ngModel)]="customer.firstName" matInput placeholder="First name" required
                   formControlName="firstName">
               </mat-form-field>
-           
-            
 
-             
 
               <mat-form-field>
                 <input [(ngModel)]="customer.lastName" matInput placeholder="Last name" formControlName="lastName" required>
               </mat-form-field>
-            
 
-           
+
+
               <mat-form-field>
                 <input [(ngModel)]="customer.username" matInput placeholder="Username" formControlName="username" required>
               </mat-form-field>
-            
 
-           
+
+
               <mat-form-field>
                 <input [(ngModel)]="customer.pass" type="password" matInput placeholder="Password" required
                   formControlName="pass">
               </mat-form-field>
-            
 
-           
+
+
               <mat-form-field>
                 <input [(ngModel)]="customer.email" matInput placeholder="Email" formControlName="email" required>
               </mat-form-field>
-            
 
-           
+
+
               <mat-form-field>
                 <input [(ngModel)]="customer.birthDate" matInput placeholder="Birth date" formControlName="birthDate" required>
               </mat-form-field>
-            
+
             <div class="button">
               <button class="signupbutton" type="submit" mat-raised-button (click)="signup()">
                 Sign Up
