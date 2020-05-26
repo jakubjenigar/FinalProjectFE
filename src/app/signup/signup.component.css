@@ -55,6 +55,8 @@ mat-form-field, mat-checkbox {
 
 mat-card-content {
   margin-top: 20px;
+}
+
 ::ng-deep.mat-snack-bar-container {
   background-color: white;
   color: black;

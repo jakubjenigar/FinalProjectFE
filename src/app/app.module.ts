@@ -24,12 +24,8 @@ import { QuizComponent } from './quiz/quiz.component';
 import {DragDropModule} from '@angular/cdk/drag-drop';
 import { CartComponent } from './cart/cart.component';
 import { ThanksComponent } from './thanks/thanks.component';
-<<<<<<< HEAD
-
-=======
-import { AboutComponent } from './about/about.component';
 import { MatSnackBarModule } from '@angular/material';
->>>>>>> 6df2438da9eff3e0857a4d211327ed83de5d6203
+
 
 
 @NgModule({
