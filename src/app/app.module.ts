@@ -21,10 +21,11 @@ import {MatToolbarModule} from '@angular/material/toolbar';
 import { LandingPageComponent } from './landing-page/landing-page.component';
 import { FooterComponent } from './footer/footer.component';
 import { QuizComponent } from './quiz/quiz.component';
-import {DragDropModule} from '@angular/cdk/drag-drop';
+import { DragDropModule } from '@angular/cdk/drag-drop';
 import { CartComponent } from './cart/cart.component';
 import { ThanksComponent } from './thanks/thanks.component';
-import { MatSnackBarModule } from '@angular/material';
+import { MatSnackBarModule, MatNativeDateModule } from '@angular/material';
+import { MatDatepickerModule } from '@angular/material/datepicker';
 
 
 
@@ -64,7 +65,9 @@ import { MatSnackBarModule } from '@angular/material';
     MatInputModule,
     MatToolbarModule,
     DragDropModule,
-    MatSnackBarModule
+    MatSnackBarModule,
+    MatNativeDateModule,
+    MatDatepickerModule
   ],
   schemas: [CUSTOM_ELEMENTS_SCHEMA],
   providers: [],
