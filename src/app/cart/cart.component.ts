@@ -3,6 +3,7 @@ import { CartItemService } from '../services/cartitem.service';
 import { CartService } from '../services/cart.service';
 import { Observable } from 'rxjs';
 import { map } from 'rxjs/operators';
+import { MatSnackBar } from '@angular/material';
 
 @Component({
   selector: 'app-cart',
@@ -10,11 +11,12 @@ import { map } from 'rxjs/operators';
   styleUrls: ['./cart.component.css']
 })
 
-
-
 export class CartComponent implements OnInit {
 
-  constructor(private cartItemService: CartItemService, private cartService: CartService) {}
+  constructor(
+    private cartItemService: CartItemService,
+    private cartService: CartService,
+    private snackBar: MatSnackBar) {}
 
   data: Observable<any>;
   deleteList: any = [];
@@ -65,6 +67,10 @@ export class CartComponent implements OnInit {
       .toPromise()
       .then((result) => {
         this.loadList();
+        this.snackBar.open('Successfully deleted items.', 'Dismiss', {
+          duration: 3000,
+          panelClass: ['mat-snack-bar-container', 'mat-stroked-button']
+        });
     });
     });
     // this.data = this.cartItemService.getItems(sessionStorage.getItem('cartId'));
@@ -78,7 +84,6 @@ export class CartComponent implements OnInit {
 
 
 }
-
 export interface Element {
   checked: boolean;
   CartItemId: number;

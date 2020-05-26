@@ -1,8 +1,9 @@
-import { Customer } from './../models/customer.model';
 import { Component, OnInit } from '@angular/core';
 import { CustomerService } from '../services/customer.service';
 import { Router, ActivatedRoute } from '@angular/router';
 import { FormGroup, FormControl, Validators } from '@angular/forms';
+import { FormGroup, FormControl } from '@angular/forms';
+import { MatSnackBar } from '@angular/material';
 
 @Component({
   selector: 'app-signup',
@@ -23,7 +24,8 @@ export class SignupComponent implements OnInit {
   constructor(
   private customerService: CustomerService,
   private router: Router,
-  private route: ActivatedRoute
+  private route: ActivatedRoute,
+  private snackBar: MatSnackBar
   ) { }
 
   form: FormGroup = new FormGroup ({
@@ -55,16 +57,22 @@ export class SignupComponent implements OnInit {
         this.customerService.create(data).subscribe(
           response => {
             console.log(response);
-            alert('Successfully created account');
+            this.snackBar.open('Successfully created account!', 'Dismiss', {
+              duration: 3000,
+              panelClass: ['mat-snack-bar-container', 'mat-stroked-button']});
             this.router.navigate(['login']);
           },
           error => {
             console.log(error);
-            alert('Invalid information. Please try again');
+            this.snackBar.open('Invalid information. Please try again.', 'Dismiss', {
+              duration: 3000,
+              panelClass: ['mat-snack-bar-container', 'mat-stroked-button']});
           }
           );
       } else {
-      alert('Invalid information. Please try again');
+      this.snackBar.open('Invalid information. Please try again.', 'Dimiss', {
+        duration: 3000,
+        panelClass: ['mat-snack-bar-container', 'mat-stroked-button']});
     }
   }
 }

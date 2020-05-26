@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-const baseUrl = 'http://localhost:8080/api/item';
+const baseUrl = 'https://finalprojectserver.azurewebsites.net/api/item';
 
 @Injectable({
   providedIn: 'root'
