@@ -1,65 +1,55 @@
-<div>
-  <div class="signUp">
-    <form [formGroup]="form">
-      <p>
-        <mat-form-field>
-            <input
-            [(ngModel)]="customer.firstName"
-            matInput placeholder="First name"
-            formControlName="firstName">
-        </mat-form-field>
-      </p>
 
-      <p>
-        <mat-form-field>
-            <input
-            [(ngModel)]="customer.lastName"
-            matInput placeholder="Last name"
-            formControlName="lastName">
-        </mat-form-field>
-      </p>
+<div class="test">
+  <div class="login-page">
+    <div>
+      <mat-card>
+        <div style="text-align:center" class="signUp">
 
-      <p>
-        <mat-form-field>
-            <input
-            [(ngModel)]="customer.username"
-            matInput placeholder="Username"
-            formControlName="username">
-        </mat-form-field>
-      </p>
+          <form [formGroup]="form">
 
-      <p>
-        <mat-form-field>
-          <input
-          [(ngModel)]="customer.pass"
-          type="password"
-          matInput placeholder="Password"
-          formControlName="pass">
-        </mat-form-field>
-      </p>
+              <mat-form-field>
+                <input [(ngModel)]="customer.firstName" matInput placeholder="First name" required
+                  formControlName="firstName">
+              </mat-form-field>
 
-      <p>
-        <mat-form-field>
-            <input
-            [(ngModel)]="customer.email"
-            matInput placeholder="Email"
-            formControlName="email">
-        </mat-form-field>
-      </p>
 
-      <p>
-        <mat-form-field>
-          <input
-          [(ngModel)]="customer.birthDate"
-          matInput placeholder="Birth date"
-          formControlName="birthDate">
-        </mat-form-field>
-      </p>
-      <div class="button">
-        <button type="submit" mat-raised-button (click)="signup()">
-          Sign Up
-        </button>
-      </div>
-    </form>
+              <mat-form-field>
+                <input [(ngModel)]="customer.lastName" matInput placeholder="Last name" formControlName="lastName" required>
+              </mat-form-field>
+
+
+
+              <mat-form-field>
+                <input [(ngModel)]="customer.username" matInput placeholder="Username" formControlName="username" required>
+              </mat-form-field>
+
+
+
+              <mat-form-field>
+                <input [(ngModel)]="customer.pass" type="password" matInput placeholder="Password" required
+                  formControlName="pass">
+              </mat-form-field>
+
+
+
+              <mat-form-field>
+                <input [(ngModel)]="customer.email" matInput placeholder="Email" formControlName="email" required>
+              </mat-form-field>
+
+
+
+              <mat-form-field>
+                <input [(ngModel)]="customer.birthDate" matInput placeholder="Birth date" formControlName="birthDate" required>
+              </mat-form-field>
+
+            <div class="button">
+              <button class="signupbutton" type="submit" mat-raised-button (click)="signup()">
+                Sign Up
+              </button>
+            </div>
+          </form>
+        </div>
+      </mat-card>
+    </div>
+
   </div>
-</div>

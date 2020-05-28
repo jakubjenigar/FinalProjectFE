@@ -3,3 +3,21 @@
     max-height: 500px;
     margin-top: 60px;
   }
+
+  ::ng-deep.mat-snack-bar-container {
+    background-color: white;
+    color: black;
+  }
+
+  ::ng-deep .mat-button, .mat-icon-button, .mat-stroked-button {
+    color: rgba(0, 85, 150,1);
+  }
+
+  ::ng-deep.mat-snack-bar-container {
+    background-color: white;
+    color: black;
+  }
+
+  ::ng-deep .mat-button, .mat-icon-button, .mat-stroked-button {
+    color: rgba(0, 85, 150,1);
+  }

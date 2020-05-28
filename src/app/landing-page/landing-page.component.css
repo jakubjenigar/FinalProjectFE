@@ -10,3 +10,121 @@
 }
 
 
+.example-card {
+  max-width: 100vw;
+  width: 100vm;
+  height: 50vh;
+  display: inline-block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: 100px;
+  background-color: rgba(255,255,255,0.7);
+}
+
+
+.quiz {
+
+    background-color: rgba(0, 85, 150,1);
+    color: white;
+    width: 40%;
+  margin-bottom: 20px;
+}
+
+h2 {
+  font-size: 44px;
+}
+
+
+.hero-text {
+  text-align: center;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-top: 5%;
+text-shadow: rgb(21, 23, 26) 1px 0 10px;
+  transform: translate(-50%, -50%);
+color: white;
+}
+
+.description{
+  font-size: 20px;
+}
+
+.mat-card-actions{
+  margin-bottom: 100px;
+}
+
+::-webkit-scrollbar {
+  display: none;
+}
+.cta{
+  background-color: white;
+
+}
+
+.featureimg {
+  width: 40%;
+}
+
+.featurecard {
+  flex: auto;
+  position: relative;
+  max-width: 300px;
+  min-width: 200px;
+  min-height: 300px;
+  text-align: center;
+  padding-left: 0%;
+  padding-right: 0%;
+  padding-bottom: 0%;
+  margin: 20px;
+
+  border-radius: 0px;
+  background-color: white;
+
+  transition: transform .6s ease;
+  }
+
+.featurecard:hover{
+transform: scale(1.05);
+}
+
+.itemimg {
+  padding-top: 10px;
+  width: 100%;
+  height: 100%;
+  max-width: 500px;
+  max-height: 240px;
+}
+
+
+.items{
+  margin-top: 110px;
+  margin-left: 20px;
+  margin-right: 20px;
+  background-color: rgba(255,255,255,0.7);
+}
+
+
+
+  .grid{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    background-color: #a7beda;
+    padding-top: 20px;
+    padding-bottom: 20px;
+  }
+
+  mat-card-title {
+    font-size: 18px;
+  }
+
+  mat-card-subtitle{
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+
+

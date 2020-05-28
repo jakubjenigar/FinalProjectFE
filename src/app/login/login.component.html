@@ -4,7 +4,7 @@
     <mat-card>
       <form [formGroup]="form">
         <mat-form-field>
-          <input
+          <input required
             type="text"
             matInput
             placeholder="Username"
@@ -15,7 +15,7 @@
         </mat-form-field>
 
         <mat-form-field>
-          <input
+          <input required
             type="password"
             matInput
             placeholder="Password"
@@ -25,7 +25,7 @@
         </mat-form-field>
 
         <div class="login-button">
-          <button
+          <button class="loginbutton"
             type="submit"
             mat-raised-button
             (click)="login()"

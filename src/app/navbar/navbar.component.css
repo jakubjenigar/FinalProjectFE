@@ -16,8 +16,21 @@
 
 
 }
+
+mat-icon {
+  margin-right: 8px;
+}
 .menubutton {
   color: white;
+}
+
+
+
+
+.menubuttonsignup {
+  background-color: white;
+  color: rgba(0, 85, 150,1);
+  margin-left: 20px;
 }
 
 .logotext{
