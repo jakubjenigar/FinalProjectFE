@@ -24,7 +24,7 @@ export class CartComponent implements OnInit {
   totalPrice: Observable<number>;
 
   lastAction: string;
-  displayedColumns: string[] = ['checked', 'picture', 'itemName', 'description', 'price'];
+  displayedColumns: string[] = ['checked', 'picture', 'itemName', 'price', 'description'];
 
   ngOnInit() {
     this.cartService.validate();

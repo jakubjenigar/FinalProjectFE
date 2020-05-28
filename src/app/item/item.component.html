@@ -1,6 +1,8 @@
 
-<mat-card class="items">
+<div class="storeContent">
+
 <div class="grid">
+
 <mat-card class="itemcard" *ngFor ="let item of item" >
 
   <img mat-card-image  src="{{ item.picture }}"
@@ -19,5 +21,10 @@
   </mat-card-actions>
 
 </mat-card>
+
 </div>
-</mat-card>
+
+<div>
+  <button mat-raised-button class="cartButton" routerLink="/cart"><span class="material-icons"> shopping_cart</span>Go to your shopping cart</button>
+</div>
+</div>

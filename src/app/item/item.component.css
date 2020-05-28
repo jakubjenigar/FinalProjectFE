@@ -72,7 +72,7 @@
     width: 100%;
     justify-content: center;
     background-color: #a7beda;
-    margin-top: 500px;
+   margin-top: 3rem;
   }
 .mat-card-image:first-child {
   margin-top: 0px !important;
@@ -102,10 +102,18 @@
     color: white;
   }
 
+  .cartButton {
+  margin-bottom: 2rem;
+  }
+
+  .storeContent{
+    text-align: center;
+  }
+
 
 .mat-card{
 padding: 0px;
-margin-top: 64px;
+margin-top: 5rem;
 }
 
 ::ng-deep.mat-snack-bar-container {
