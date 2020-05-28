@@ -1,10 +1,11 @@
+<div class="cartContainer">
 <div class="cart-page">
     <mat-table [dataSource]="data">
 
          <ng-container matColumnDef="checked">
-          <mat-header-cell *matHeaderCellDef>Check</mat-header-cell>
-            <mat-cell *matCellDef="let element"> 
-              <mat-checkbox  [checked]="element.checked" (change)="onChange($event, element)"></mat-checkbox>
+          <mat-header-cell *matHeaderCellDef>Select</mat-header-cell>
+            <mat-cell *matCellDef="let element">
+              <mat-checkbox  [checked]="element.checked"  (change)="onChange($event, element)"></mat-checkbox>
             </mat-cell>
          </ng-container>
 
@@ -18,23 +19,45 @@
             <mat-cell mat-cell *matCellDef="let element"> {{element.ItemName}}</mat-cell>
           </ng-container>
 
+        <ng-container matColumnDef="price">
+            <mat-header-cell mat-header-cell *matHeaderCellDef> Price </mat-header-cell>
+             <mat-cell mat-cell *matCellDef="let element">{{element.Price}}</mat-cell>
+        </ng-container>
+
           <ng-container matColumnDef="description">
             <mat-header-cell *matHeaderCellDef> Description </mat-header-cell>
             <mat-cell mat-cell *matCellDef="let element"> {{element.Description}}</mat-cell>
           </ng-container>
 
-          <ng-container matColumnDef="price">
-            <mat-header-cell mat-header-cell *matHeaderCellDef> Price </mat-header-cell>
-            <mat-cell mat-cell *matCellDef="let element"> {{element.Price}} kr</mat-cell>
-          </ng-container>
+
 
           <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
           <mat-row *matRowDef="let row; columns: displayedColumns;"
            [ngClass]="{hovered: row.hovered, highlighted: row.highlighted}"  (mouseover)="row.hovered = true" (mouseout)="row.hovered = false"></mat-row>
+
+
     </mat-table>
-    <mat-card-actions>
-      <button class="deleteAll" mat-raised-button (click)="deleteCheckedItems()">Delete selected</button>
-    </mat-card-actions>
-    <h1>{{totalPrice}} kr</h1>
+  <div class="actions">
+    <div class="deleteAll">
+    <button class="deleteAll" mat-raised-button color="warn" (click)="deleteCheckedItems()">Delete selected</button>
+    </div>
+
+  <div class="price">
+    <h2>Total: <span style="color:rgba(0, 85, 150,1); margin-right: 2rem;">{{totalPrice}} kr</span></h2>
+    <div>
+
+    <button  class="payButton" mat-raised-button routerLink="/shop">Continue shopping</button>
+      <button  mat-raised-button routerLink="/thanks">Pay now</button>
+    </div>
+
+
+  </div>
+  </div>
+
+
+
+
+
 </div>
 
+</div>
