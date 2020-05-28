@@ -3,6 +3,8 @@
     color: white;
     float: left;
     text-align: left;
+
+
   }
 
   .footertextright{
@@ -70,9 +72,7 @@
       color: white;
   }
 
-  .contactus {
-      padding-left: 30px;
-  }
+
 
   .emailphone {
       padding-top: 30px;
