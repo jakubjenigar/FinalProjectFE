@@ -3,8 +3,6 @@
     color: white;
     float: left;
     text-align: left;
-
-
   }
 
   .footertextright{
@@ -12,7 +10,7 @@
     text-align: center;
   }
 
-  
+
 
   .footer-copyright {
       color:white;
@@ -83,4 +81,13 @@
   .footermenu {
       padding-top: 5px;
       padding-bottom: 5px;
+  }
+
+  .page-footer{
+    float: bottom;
+  }
+
+
+  .footerImage{
+    float: left;
   }
