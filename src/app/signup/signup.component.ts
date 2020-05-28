@@ -16,8 +16,7 @@ export class SignupComponent implements OnInit {
     lastName: '',
     username: '',
     pass: '',
-    email: '',
-    birthDate: ''
+    email: ''
   };
 
   constructor(
@@ -32,8 +31,7 @@ export class SignupComponent implements OnInit {
     lastName: new FormControl(),
     username: new FormControl(),
     pass: new FormControl(),
-    email: new FormControl(),
-    birthDate: new FormControl(),
+    email: new FormControl()
   });
 
   ngOnInit() { }
@@ -44,14 +42,13 @@ export class SignupComponent implements OnInit {
       lastName: this.customer.lastName,
       username: this.customer.username,
       pass: this.customer.pass,
-      email: this.customer.email,
-      birthDate: this.customer.birthDate
+      email: this.customer.email
     };
 
     console.log(data);
     if (data.firstName !== '' && data.lastName !== ''
       && data.username !== '' && data.pass !== ''
-      && data.email !== '' && data.birthDate !== ''
+      && data.email !== ''
       ) {
         this.customerService.create(data).subscribe(
           response => {
