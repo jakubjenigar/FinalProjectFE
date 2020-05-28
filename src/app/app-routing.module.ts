@@ -5,19 +5,18 @@ import {LoginComponent} from './login/login.component';
 import {LandingPageComponent} from './landing-page/landing-page.component';
 import {SignupComponent} from './signup/signup.component';
 import { CartComponent } from './cart/cart.component';
-import { SupportComponent } from './support/support.component';
+import { ItemComponent } from './item/item.component';
 import { LearnComponent } from './learn/learn.component';
 import { ThanksComponent } from './thanks/thanks.component';
-import { AboutComponent } from './about/about.component';
+
 
 const routes: Routes = [
   { path: 'login', component: LoginComponent },
   { path: 'sign_up', component: SignupComponent },
-  { path: 'about', component: AboutComponent },
   { path: 'quiz', component: QuizComponent },
   { path: 'cart', component: CartComponent},
   { path: 'thanks', component: ThanksComponent},
-  { path: 'shop', component: SupportComponent },
+  { path: 'shop', component: ItemComponent },
   { path: 'learn', component: LearnComponent },
   { path: '**', component: LandingPageComponent },
 ];
@@ -31,5 +30,5 @@ export class AppRoutingModule { }
 
 
 // tslint:disable-next-line:max-line-length
-export const routingComponents = [LandingPageComponent, LoginComponent, SignupComponent, SupportComponent, CartComponent, AboutComponent, LearnComponent];
+export const routingComponents = [LandingPageComponent, LoginComponent, SignupComponent, ItemComponent, CartComponent, LearnComponent, QuizComponent];
 
