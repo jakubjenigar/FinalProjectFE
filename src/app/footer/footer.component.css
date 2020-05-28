@@ -1,8 +1,16 @@
 .footertext{
-    padding-top: 30px;
+    padding-top: 40px;
     color: white;
-    margin-left: -40px;
+    float: left;
+    text-align: left;
   }
+
+  .footertextright{
+    color: white;
+    text-align: center;
+  }
+
+  
 
   .footer-copyright {
       color:white;
@@ -16,10 +24,33 @@
     padding-left: 80px;
 }
 
+.row {
+    text-align: center;
+    margin-left: 80px;
+    margin-right: 80px;
+}
+
   .footerimg {
-      width: 60%;
-      margin-top: -5px;
+        width:50%;
+        height:auto;
+        max-width:100%;
+        max-height:100%;
     }
+      .img-wrap{
+        float:left;
+        width:20%;
+        margin-right:2%;
+      }
+      .descfooter{
+        float:right;
+        width:100%;
+      }
+      .descfooter p{
+        margin-top:0;
+      }
+      .clear{
+        clear:both;
+      }
 
 
     .page-footer {
@@ -31,6 +62,8 @@
       text-decoration: none;
       color: white;
   }
+
+.limenu {padding-bottom: 12px;}
 
   a{
       text-decoration: none;
@@ -46,3 +79,8 @@
       padding-left: 80px;
   }
 
+
+  .footermenu {
+      padding-top: 5px;
+      padding-bottom: 5px;
+  }
