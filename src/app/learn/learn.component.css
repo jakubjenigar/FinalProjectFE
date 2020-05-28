@@ -21,11 +21,8 @@
     .row {
       padding-top: 20px;
       background-color: #a7beda;
-
-
       margin-right: 0;
       margin-left: 0;
-
 
     }
 
@@ -65,7 +62,7 @@
     ::ng-deep .mat-tab-labels {
       /*margin-left: 100px;*/
       background-color: white;
-
+      overflow: hidden;
     }
 
 
@@ -162,4 +159,9 @@
 
 .mat-card > .mat-card-actions:last-child{
   margin-bottom: 50px;
+}
+
+mat-tab-body-content {
+  height: 100%;
+  overflow: hidden !important;
 }

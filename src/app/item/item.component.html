@@ -15,7 +15,9 @@
 
 
   <mat-card-actions>
-    <button  mat-raised-button (click)="addToCart(item.itemId)"> <span class="material-icons"> add_shopping_cart</span> Add to card</button>
+    <button  mat-raised-button matTooltip="Add product to cart"
+    matTooltipShowDelay="700"
+    matTooltipHideDelay="200" (click)="addToCart(item.itemId)"> <span class="material-icons"> add_shopping_cart</span> Add to card</button>
   </mat-card-actions>
 
 </mat-card>
