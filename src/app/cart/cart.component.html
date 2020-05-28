@@ -3,7 +3,7 @@
 
          <ng-container matColumnDef="checked">
           <mat-header-cell *matHeaderCellDef>Check</mat-header-cell>
-            <mat-cell *matCellDef="let element"> 
+            <mat-cell *matCellDef="let element">
               <mat-checkbox  [checked]="element.checked" (change)="onChange($event, element)"></mat-checkbox>
             </mat-cell>
          </ng-container>
@@ -33,7 +33,9 @@
            [ngClass]="{hovered: row.hovered, highlighted: row.highlighted}"  (mouseover)="row.hovered = true" (mouseout)="row.hovered = false"></mat-row>
     </mat-table>
     <mat-card-actions>
-      <button class="deleteAll" mat-raised-button (click)="deleteCheckedItems()">Delete selected</button>
+      <button class="deleteAll" mat-raised-button matTooltip="Delete products"
+      matTooltipShowDelay="700"
+      matTooltipHideDelay="200" (click)="deleteCheckedItems()">Delete selected</button>
     </mat-card-actions>
     <h1>{{totalPrice}} kr</h1>
 </div>

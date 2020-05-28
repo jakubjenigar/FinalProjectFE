@@ -1,15 +1,47 @@
 <mat-toolbar>
   <mat-toolbar-row>
    <img class="logo" alt="Better Future logo" src="assets/betterFuture3.png">
-  <button class="menubutton" id="home" mat-button routerLink="">Home</button>
-  <button class="menubutton" mat-button routerLink="learn">Learn</button>
-    <button class="menubutton" mat-button routerLink="quiz">Quiz</button>
-  <button class="menubutton" mat-button routerLink="shop">Shop</button>
+  <button class="menubutton"
+  matTooltip="Home page"
+    matTooltipShowDelay="700"
+    matTooltipHideDelay="200"
+  id="home" mat-button routerLink="">Home</button>
+  <button class="menubutton"
+  matTooltip="Go to articles"
+    matTooltipShowDelay="700"
+    matTooltipHideDelay="200"
+  mat-button routerLink="learn">Learn</button>
+    <button class="menubutton"
+    matTooltip="Go to quiz"
+    matTooltipShowDelay="700"
+    matTooltipHideDelay="200"
+     mat-button routerLink="quiz">Quiz</button>
+  <button class="menubutton"
+  matTooltip="Check out products"
+    matTooltipShowDelay="700"
+    matTooltipHideDelay="200"
+   mat-button routerLink="shop">Shop</button>
     <span class="example-spacer"></span>
-    <button class="menubutton" mat-button routerLink="cart" ><mat-icon>shopping_cart</mat-icon></button>
-    <button class="menubutton" mat-button routerLink="login" *ngIf="!isLoggedIn()">Log In</button>
-    <button class="menubutton" mat-button routerLink="" *ngIf="isLoggedIn()" (click)="logout()">Logout</button>
-    <button class="menubuttonsignup" mat-button routerLink="sign_up" *ngIf="!isLoggedIn()">Sign Up</button>
+    <button class="menubutton"
+    matTooltip="Your cart"
+    matTooltipShowDelay="700"
+    matTooltipHideDelay="200"
+     mat-button routerLink="cart" ><mat-icon>shopping_cart</mat-icon></button>
+    <button class="menubutton" mat-button routerLink="login"
+    matTooltip="Log to account"
+    matTooltipShowDelay="700"
+    matTooltipHideDelay="200"
+     *ngIf="!isLoggedIn()">Log In</button>
+    <button class="menubutton" mat-button routerLink=""
+    matTooltip="Log out of account"
+    matTooltipShowDelay="700"
+    matTooltipHideDelay="200"
+     *ngIf="isLoggedIn()"
+     (click)="logout()">Logout</button>
+    <button class="menubuttonsignup" mat-button routerLink="sign_up"
+      matTooltip="Create account"
+    matTooltipShowDelay="700"
+    matTooltipHideDelay="200" *ngIf="!isLoggedIn()">Sign Up</button>
   </mat-toolbar-row>
 
 
