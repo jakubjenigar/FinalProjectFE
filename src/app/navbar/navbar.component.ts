@@ -1,3 +1,4 @@
+import { MatSnackBar } from '@angular/material';
 import { Component, OnInit } from '@angular/core';
 
 @Component({
@@ -8,7 +9,9 @@ import { Component, OnInit } from '@angular/core';
 export class NavbarComponent implements OnInit {
   isLoggedin = false;
 
-  constructor() { }
+  constructor(
+    public snackBar: MatSnackBar
+  ) { }
 
   ngOnInit() {}
 
@@ -26,6 +29,9 @@ export class NavbarComponent implements OnInit {
     // remove user from session storage to log user out
     sessionStorage.clear();
     this.isLoggedin = false;
+    this.snackBar.open('Successfully logged out of your account.', 'Dismiss', {
+    duration: 3000,
+    panelClass: ['mat-snack-bar-container', 'mat-stroked-button']});
   }
 
 }

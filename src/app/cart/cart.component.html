@@ -3,9 +3,11 @@
     <mat-table [dataSource]="data">
 
          <ng-container matColumnDef="checked">
+
           <mat-header-cell *matHeaderCellDef>Select</mat-header-cell>
             <mat-cell *matCellDef="let element">
               <mat-checkbox  [checked]="element.checked"  (change)="onChange($event, element)"></mat-checkbox>
+
             </mat-cell>
          </ng-container>
 
@@ -39,7 +41,9 @@
     </mat-table>
   <div class="actions">
     <div class="deleteAll">
-    <button class="deleteAll" mat-raised-button color="warn" (click)="deleteCheckedItems()">Delete selected</button>
+    <button class="deleteAll" mat-raised-button color="warn" matTooltip="Delete products"
+      matTooltipShowDelay="700"
+      matTooltipHideDelay="200" (click)="deleteCheckedItems()">Delete selected</button>
     </div>
 
   <div class="price">
@@ -53,11 +57,3 @@
 
   </div>
   </div>
-
-
-
-
-
-</div>
-
-</div>
