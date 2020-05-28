@@ -1,7 +1,6 @@
 .footertext{
     padding-top: 30px;
     color: white;
-    margin-left: -40px;
   }
 
   .footer-copyright {
@@ -17,7 +16,8 @@
 }
 
   .footerimg {
-      width: 60%;
+      width: 6rem;
+    height: 9rem;
       margin-top: -5px;
     }
 
@@ -37,9 +37,7 @@
       color: white;
   }
 
-  .contactus {
-      padding-left: 30px;
-  }
+
 
   .emailphone {
       padding-top: 30px;
