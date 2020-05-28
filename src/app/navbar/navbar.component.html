@@ -6,7 +6,7 @@
     <button class="menubutton" mat-button routerLink="quiz">Quiz</button>
   <button class="menubutton" mat-button routerLink="shop">Shop</button>
     <span class="example-spacer"></span>
-    <button class="menubutton" mat-button routerLink="cart" *ngIf="!isLoggedIn()"><mat-icon>shopping_cart</mat-icon>Cart</button>
+    <button class="menubutton" mat-button routerLink="cart" ><mat-icon>shopping_cart</mat-icon></button>
     <button class="menubutton" mat-button routerLink="login" *ngIf="!isLoggedIn()">Log In</button>
     <button class="menubutton" mat-button routerLink="" *ngIf="isLoggedIn()" (click)="logout()">Logout</button>
     <button class="menubuttonsignup" mat-button routerLink="sign_up" *ngIf="!isLoggedIn()">Sign Up</button>

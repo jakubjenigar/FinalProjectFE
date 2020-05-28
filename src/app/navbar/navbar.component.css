@@ -17,11 +17,11 @@
 
 }
 
-mat-icon {
-  margin-right: 8px;
-}
+
+
 .menubutton {
   color: white;
+  text-decoration: none;
 }
 
 
@@ -54,6 +54,16 @@ img{
 .example-spacer {
   flex: 1 1 auto;
 }
+
+::ng-deep.mat-snack-bar-container {
+  background-color: white;
+  color: black;
+}
+
+::ng-deep .mat-button, .mat-icon-button, .mat-stroked-button {
+  color: rgba(0, 85, 150,1);
+}
+
 
 
 
